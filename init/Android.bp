@@ -1,16 +1,16 @@
 cc_library_static {
-    name: "libinit_umi",
+    name: "libinit_apollo",
     include_dirs: [
         "system/core/base/include",
         "system/core/init",
     ],
     cflags: [
         "-Wall",
-//      "-DBUILD_FOR_CMI",
+//      "-DBUILD_FOR_APOLLO",
     ],
     static_libs: [
         "libbase",
     ],
-    srcs: ["init_umi.cpp"],
+    srcs: ["init_apollo.cpp"],
     recovery_available: true,
 }

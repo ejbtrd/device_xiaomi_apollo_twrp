@@ -14,6 +14,8 @@
 # limitations under the License.
 #
 
+DEVICE_PATH := device/xiaomi/apollo
+
 PRODUCT_PACKAGES += \
     bootctrl.kona \
     bootctrl.kona.recovery \
@@ -30,6 +32,7 @@ PRODUCT_HOST_PACKAGES += \
 
 # SHIPPING API
 PRODUCT_SHIPPING_API_LEVEL := 29
+
 # VNDK API
 PRODUCT_TARGET_VNDK_VERSION := 30
 
@@ -45,6 +48,6 @@ PRODUCT_EXTRA_RECOVERY_KEYS += \
     $(DEVICE_PATH)/security/miui_releasekey
 
 # PRODUCT_RELEASE_NAME ro.twrp.device.name
-PRODUCT_PROPERTY_OVERRIDES += ro.twrp.device.name=$(PRODUCT_RELEASE_NAME)
+PRODUCT_PROPERTY_OVERRIDES += ro.twrp.device.name=apollo
 
-PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$(LOCAL_PATH)/prebuilt/$(PRODUCT_RELEASE_NAME)/modules,recovery/root/vendor/lib/modules)
+PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$(LOCAL_PATH)/prebuilt/modules,recovery/root/vendor/lib/modules)
