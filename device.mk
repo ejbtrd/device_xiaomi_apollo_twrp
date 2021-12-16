@@ -50,4 +50,6 @@ PRODUCT_EXTRA_RECOVERY_KEYS += \
 # PRODUCT_RELEASE_NAME ro.twrp.device.name
 PRODUCT_PROPERTY_OVERRIDES += ro.twrp.device.name=apollo
 
-PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$(LOCAL_PATH)/prebuilt/modules,recovery/root/vendor/lib/modules)
+PRODUCT_COPY_FILES += \
+    $(OUT_DIR)/target/product/apollo/obj/SHARED_LIBRARIES/libandroidicu_intermediates/libandroidicu.so:$(TARGET_COPY_OUT_RECOVERY)/root/system/lib64/libandroidicu.so \
+    $(call find-copy-subdir-files,*,$(LOCAL_PATH)/prebuilt/modules,recovery/root/vendor/lib/modules)
