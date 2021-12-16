@@ -17,14 +17,11 @@
 DEVICE_PATH := device/xiaomi/apollo
 
 PRODUCT_PACKAGES += \
-    bootctrl.kona \
-    bootctrl.kona.recovery \
+    bootctrl.xiaomi_sm8250 \
+    bootctrl.xiaomi_sm8250.recovery \
     android.hardware.boot@1.0-service \
     android.hardware.boot@1.0-impl \
     android.hardware.boot@1.0-impl.recovery \
-    android.hardware.boot@1.0-impl-wrapper.recovery \
-    android.hardware.fastboot@1.0-impl-mock \
-    android.hardware.fastboot@1.0-impl-mock.recovery \
     fastbootd
 
 PRODUCT_HOST_PACKAGES += \
